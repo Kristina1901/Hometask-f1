@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #7b4397, #dc2430); 
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+table {
+   width: 100%;
+   vertical-align: baseline;
+   border-collapse: separate;
+   border-spacing: 0 15px;
+ 
+}
+.container {
+    padding: 25px;
+
+}
+thead {
+    background: #111;
+    
+}
+
+.container__link {
+    display: flex;
+}
+.thead-archive {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../img/free-icon-archive-2316069.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+
+}
+
+.archive {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../img/free-icon-archive-2316069.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   
+
+}
+.thead-delete {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../img/free-icon-removed-1092833.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+.delete {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../img/free-icon-removed-1092833.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.edit {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../img/free-icon-edit-1040228.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+tr {
+    text-align: center;
+}
+td {
+   padding: 10px;
+   background: #111;
+ 
+}
+tbody:before {
+    content: "-";
+    display: block;
+    line-height: 1em;
+    color: transparent;
+}
+td:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+td:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px; 
+  height: 300px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 5px;
+}
+.form-label {
+    color:black;
+    margin-bottom: 20px;
+   
+}
+.form-input-date {
+    margin-left: 20px;
+}
+.select {
+    margin-bottom: 20px;
+}
