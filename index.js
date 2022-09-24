@@ -109,9 +109,14 @@ const makelistNumbert = arr => {
   let fir = myElements.length-1
    if (myElements.length !==0) {
    if(uniqArr.length-1 === myElements.length-1) {
-    let k = myElements.length-1
-    let el = myElements.nextElementSibling;
-    console.log(myElements)
+     let k = myElements[0].nextElementSibling
+     for (let i = 0; i < info.length; i++) {
+      if(info[i].select === uniqArr[f]) {
+        result.push(info[i])
+        
+    }
+  }
+      k.innerHTML = result.length
       return
      }
      
@@ -119,7 +124,7 @@ const makelistNumbert = arr => {
        for (let i = 0; i < info.length; i++) {
         if(info[i].select === uniqArr[f]) {
           result.push(info[i])
-          console.log(result)
+          
           
       }
     }
